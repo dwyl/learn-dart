@@ -84,7 +84,7 @@ a = 42;
 a = 'hello'
 ```
 
-On this exemple the varible a is first declared,
+In this example the variable `a` is first declared,
 then on another line initialised.
 On the last line the new `'hello` value is assigned to `a`.
 
@@ -220,7 +220,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
