@@ -86,11 +86,11 @@ a = 'hello'
 
 In this example the variable `a` is first declared,
 then on another line initialised.
-On the last line the new `'hello` value is assigned to `a`.
+On the last line the new `'hello'` value is assigned to `a`.
 
 However because Dart is a [statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
 the following code won't compile as `a` is now declared and initialised at the same time,
-ie `a` is created and linked to values with a specific type.
+i.e. `a` is created and linked to values with a specific type (_`int`_)
 
 **error**
 ```dart
@@ -103,7 +103,7 @@ a = 'hello'
 ```dart
 int a;
 a = 42;
-a = 52'
+a = 52;
 ```
 
 A type name can be used to create variables.
@@ -130,7 +130,7 @@ a = 'hello'
 #### The `final` keyword
 
 `final` can be used to create a constant variable.
-The varible needs to be declared and initialised at the same time!
+The variable _has_ to be declared and initialised at the same time!
 
 ```dart
 final a = 42;
@@ -174,8 +174,8 @@ a = 52;
 
 #### The `dynamic` keyword
 
-The `dynamic` keyword is used to create variable that
-can contains value of different type.
+The `dynamic` keyword is used to create a variable that
+can contain values of different types.
 
 ```dart
 dynamic a;
@@ -220,7 +220,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
