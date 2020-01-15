@@ -74,7 +74,7 @@ A Dart program is composed of −
 
 ### Variables
 
-There are multiple ways (too many?) for creating variables with Dart:
+There are several ways to define variables in Dart:
 
 #### The keyword `var`:
 
@@ -220,7 +220,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
