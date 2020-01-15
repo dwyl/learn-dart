@@ -72,6 +72,128 @@ A Dart program is composed of −
 - Comments
 - Libraries and Packages
 
+### Variables
+
+There are several ways to define variables in Dart:
+
+#### The keyword `var`:
+
+```dart
+var a;
+a = 42;
+a = 'hello'
+```
+
+In this example the variable `a` is first declared,
+then initialised on the next line.
+On the last line the new `'hello'` value is assigned to `a`.
+
+However because Dart is a [statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
+the following code won't compile as `a` is declared and initialised at the same time,
+i.e. `a` is created and linked to values with a specific type (_`int`_)
+
+**error**
+```dart
+var a = 42;
+a = 'hello'; //error as the variable a must have a value of type int
+```
+
+#### Type name
+
+```dart
+int a;
+a = 42;
+a = 52;
+```
+
+A type name can be used to create variables.
+In this example `a` is declared with the type `int`,
+then the value `42` is assigned to `a`.
+On the last line `a` is assigned a new `int` value.
+
+It is also possible to declare and assign a value to a variable at the same time:
+
+```dart
+int a = 42;
+```
+
+However Dart will produce an error if multiple assignements are done
+with different type of values:
+
+**error**
+```dart
+int a;
+a = 42;
+a = 'hello'; //error as a is defined to only be assigned with a value of type int
+```
+
+#### The `final` keyword
+
+`final` can be used to create a constant.
+A constant _must_ be declared and initialised at the same time 
+and cannot be changed once it has been declared.
+
+```dart
+final a = 42;
+```
+
+**error**
+```dart
+final a;
+a = 42;
+```
+
+The type of the variable/constant can be also used with `final`:
+
+```dart
+final int a = 42;
+```
+
+Attempting to reassign a constant created with `final` keyword will produce an error:
+
+**error**
+```dart
+final int a = 42;
+a = 52; // error as the variable a is already defined
+```
+
+#### The `const` keyword
+
+The `const` keyword is another way for creating constant value.
+The difference with `final` is that the variable created with `const`
+must be initialised at ***compile time***, `const birth  = "2008/12/26"`
+whereas a `final` value must be known at ***runtime***, `final birth  = getBirthFromDB()`. Neither can be changed after it has been initialised.
+
+```dart
+const int a = 42;
+```
+
+**error**
+```dart
+const int a = 42;
+a = 52; // attempting to assign a new value to a constant. 
+```
+
+#### The `dynamic` keyword
+
+The `dynamic` keyword is used to create a variable that
+can contain values of different types. It should be used sparingly 
+otherwise we lose the primary benefit of a statically typed language.
+
+```dart
+dynamic a;
+a = 42;
+a = 'hello'
+```
+
+Because the type of the variable can change,
+we can't write the following:
+
+```dart
+dynamic int a; // https://repl.it/repls/GreenDeadMatch
+a = 42;
+```
+
 ## Object-Oriented Programming in Dart
 
 Dart is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
@@ -88,8 +210,8 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 
 Dart:
 
-- More trust-worthy as it’s backed by Google
-- Runs twice the speed of JavaScript
+- Backed by Google
+- In some instances, Dart is up to [twice the speed](https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/dart.html) of JavaScript
 - Quite scalable across projects
 - Like Java
 - Used extensively for the Flutter mobile UI framework
@@ -101,10 +223,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
-
-
-
 
 
 
