@@ -95,7 +95,7 @@ i.e. `a` is created and linked to values with a specific type (_`int`_)
 **error**
 ```dart
 var a = 42;
-a = 'hello'
+a = 'hello'; //error as the variable a must have a value of type int
 ```
 
 #### Type name
@@ -124,7 +124,7 @@ with different type of values:
 ```dart
 int a;
 a = 42;
-a = 'hello'
+a = 'hello'; //error as a is defined to only be assigned with a value of type int
 ```
 
 #### The `final` keyword
@@ -153,7 +153,7 @@ Reassigning the variable created with `final` will produce an error:
 **error**
 ```dart
 final int a = 42;
-a = 52;
+a = 52; // error as the variable a is already defined
 ```
 
 #### The `const` keyword
