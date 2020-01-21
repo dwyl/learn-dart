@@ -205,7 +205,9 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 }
 ```
 
-A function with a retun type of `Future<T>` (`T` here represent any types) can have two state returns `Uncomplete` and `Complete`.
+A function with a return type of `Future<T>` (where `T` represents any type) 
+can have _three_ possible return states: 
+`Uncompleted`, `Completed ` (_with_) ***success*** and `Completed` (_with_) ***error***
 When completed the function will return the type `T`, in our case the `hello` function returns a `String`.
 If an error occurs then the function will return an `Error`.
 
@@ -300,7 +302,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
