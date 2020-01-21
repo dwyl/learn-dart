@@ -197,7 +197,7 @@ a = 42;
 ## Asynchronous events
 
 Dart provides the `Future` class to represent asynchronous events.
-For example the following `hello` function will return a `String`  in a near futur: 
+For example the following `hello` function will return a `String`  in a near future: 
 
 ```dart
 Future<String> hello() { // The type parameter of Future is a String, represented by <String>
@@ -212,7 +212,7 @@ If an error occurs then the function will return an `Error`.
 To be able to use the returned value of an asynchronus function we can use the `async` and `await` keywords.
 We need first to describe the function using an asynchronous function by adding the `async` keyword before the body of the function.
 Then we using the asynchronous function we prefix the call to the function with `await`. This will stop the process of the function
-and wait for the futur result. For example we can create a `main` function which will use our `hello` function:
+and wait for the future result. For example we can create a `main` function which will use our `hello` function:
 
 ```dart
 void main() async {
@@ -221,7 +221,7 @@ void main() async {
 }
 
 Future<String> hello() { // The type parameter of Future is a String, represented by <String>
-    return Future.delayed(Duration(seconds: 2), () => "hello"); // Using the Future.delayed function to create a time gap of 2 seconds
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Use Future.delayed to delay execution by 2 sec.
 }
 ```
 
@@ -241,7 +241,7 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 }
 ```
 
-We can also use the `then` function which take a callback function to get the futur value:
+We can also use the `then` function which takes a callback function to get the future value:
 
 
 ```dart
@@ -256,7 +256,7 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 }
 ```
 
-Compare to `await`, `then` will not stop the process of the function and continue the execution:
+Compared to `await`, `then` will not stop the process of the function and continue the execution:
 
 ```dart
 void main() {
@@ -300,7 +300,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
