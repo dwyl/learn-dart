@@ -194,6 +194,85 @@ dynamic int a; // https://repl.it/repls/GreenDeadMatch
 a = 42;
 ```
 
+## Asynchronous events
+
+Dart provides the `Future` class to represent asynchronous events.
+For example the following `hello` function will return a `String`  in a near future: 
+
+```dart
+Future<String> hello() { // The type parameter of Future is a String, represented by <String>
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Using the Future.delayed function to create a time gap of 2 seconds
+}
+```
+
+A function with a return type of `Future<T>` (where `T` represents any type) 
+can have _three_ possible return states: 
+`Uncompleted`, `Completed ` (_with_) ***success*** and `Completed` (_with_) ***error***
+When completed the function will return the type `T`, in our case the `hello` function returns a `String`.
+If an error occurs then the function will return an `Error`.
+
+To be able to use the returned value of an asynchronus function we can use the `async` and `await` keywords.
+We need first to describe the function using an asynchronous function by adding the `async` keyword before the body of the function.
+Then we using the asynchronous function we prefix the call to the function with `await`. This will stop the process of the function
+and wait for the future result. For example we can create a `main` function which will use our `hello` function:
+
+```dart
+void main() async {
+    String hi = await hello();
+    print(hi); // print "hello" after 2 seconds
+}
+
+Future<String> hello() { // The type parameter of Future is a String, represented by <String>
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Use Future.delayed to delay execution by 2 sec.
+}
+```
+
+To test this code you can copy/paste it and run it on dartpad: https://dartpad.dev/
+
+If we do not add the `async/await` keywords, we can still call the asynchronous `hello` function,
+however the result won't be ready and the `Future` instance will be returned instead of the String:
+
+```dart
+void main() {
+    dynamic hi = hello();
+    print(hi); // print "Instance of _Future<String>"
+}
+
+Future<String> hello() { // The type parameter of Future is a String, represented by <String>
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Using the Future.delayed function to create a time gap of 2 seconds
+}
+```
+
+We can also use the `then` function which takes a callback function to get the future value:
+
+
+```dart
+void main() {
+    hello().then((futureValue) { // futureValue is the retuned value of the hello function
+        print(futureValue); // print after 2 seconds "hello"
+    });
+}
+
+Future<String> hello() { // The type parameter of Future is a String, represented by <String>
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Using the Future.delayed function to create a time gap of 2 seconds
+}
+```
+
+Compared to `await`, `then` will not stop the process of the function and continue the execution:
+
+```dart
+void main() {
+    hello().then((futureValue) { // futureValue is the retuned value of the hello function
+        print(futureValue); // print after 2 seconds "hello"
+    });
+    print('printed first'); // This print will be displayed before 'hello'
+}
+
+Future<String> hello() { // The type parameter of Future is a String, represented by <String>
+    return Future.delayed(Duration(seconds: 2), () => "hello"); // Using the Future.delayed function to create a time gap of 2 seconds
+}
+```
+
 ## Object-Oriented Programming in Dart
 
 Dart is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
@@ -223,8 +302,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
-
 
 
 
