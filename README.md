@@ -277,13 +277,25 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 
 Dart is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
 
-
 - Object
 - State
 - Behavior
 - Identity
 - Class
 - Method
+
+## Effective Code in Flutter
+
+Even though Flutter is a language that may seem familiar to many people, the "right" way to build an application to be a success is through the use of best practices.</br>
+There are some tools that can make the process easier:
+
+
+## Dartanalyzer
+
+It's Dart analysis tool. It will make it easier for us because we don't need to rely on the IDE because Dart will correct the code even before we run the application.</br> 
+It also makes it easier when we need to find a bug that has occurred. 
+
+
 
 ## Dart VS Javascript:
 
