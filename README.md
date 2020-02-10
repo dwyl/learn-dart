@@ -293,7 +293,21 @@ There are some tools that can make the process easier:
 ## Dartanalyzer
 
 It's Dart analysis tool. It will make it easier for us because we don't need to rely on the IDE because Dart will correct the code even before we run the application.</br> 
-It also makes it easier when we need to find a bug that has occurred. 
+It also makes it easier when we need to find a bug that has occurred.</br>
+
+## Pedantic Package
+
+The package that aims to document Google how Dart Analysis works.
+It contains pieces of Dart code that are used in best practices.</br>
+
+To use this package just add a dependency in our pubspec.yaml:
+
+``pedantic: ^1.4.0``
+
+Then to update the dependencies just use the command:
+
+
+``flutter packages get``
 
 
 
@@ -314,15 +328,3 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
-
-
-
-
-
-
-
-
-
-
-
