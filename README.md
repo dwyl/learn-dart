@@ -285,6 +285,46 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 - Class
 - Method
 
+
+
+
+## Dart Testing
+
+The software testing acts mainly in the quality assurance of the systems.</br>
+It guarantees the user that he will not find any faults or bugs when using the application.
+Several tests can be done to test functionality, usability, performance or security.</br>
+All in the end will have the same goal to bring the user the best app.
+
+## Types of Tests 
+
+There are several types of software tests, but of all the ones there are three that are most used when talking about Dart.
+unit, component and end-to-end are the most used.
+
+### Unit Tests
+
+Unit tests are used to test small parts of code, such as a function, a class, or even a change made to the layout.
+They are used more than other tests because they make it easier to build an application.
+
+### Component Tests
+
+Component tests are used to test several functions, or several tasks at the same time. It is used after the unit test is done.
+
+### End-To-End Tests
+
+The end-to-end tests are used to test entire applications or most of them on real devices, or a browser.
+
+## Useful libraries in Dart
+
+There are also some libraries that can be useful when talking about Dart:
+
+``package:test``
+
+It helps us to have a perception of how we have to put the code, it serves to test small codes or big codes. 
+
+``package:mockito``
+
+It helps us to create objects separately and checks that this object has no errors after being put together with others.
+
 ## Dart VS Javascript:
 
 Dart:
