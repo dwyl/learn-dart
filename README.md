@@ -286,18 +286,22 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 
 ## Effective Code in Flutter
 
-Even though Flutter is a language that may seem familiar to many people, the "right" way to build an application to be a success is through the use of best practices.</br>
+The `Dart` language is familiar to most developers used to object oriented programming. 
+There are a few best practices worth learning to ensure success.</br>
 There are some tools that can make the process easier:
 
 
 ## Dartanalyzer
 
-It's Dart analysis tool. It will make it easier for us because we don't need to rely on the IDE because Dart will correct the code even before we run the application.</br> 
-It also makes it easier when we need to find a bug that has occurred.</br>
+[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br> 
+
+This is an example of performing static analysis 
+over all the Dart files under the lib and test directories:
+`dartanalyzer lib test`
 
 ## Pedantic Package
 
-The package that aims to document Google how Dart Analysis works.
+The [pedantic](https://pub.dev/packages/pedantic) package shows how static analysis is used internally at Google.
 It contains pieces of Dart code that are used in best practices.</br>
 
 To use this package just add a dependency in our pubspec.yaml:
