@@ -290,24 +290,32 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 
 ## Dart Testing
 
-The software testing acts mainly in the quality assurance of the systems.</br>
-It guarantees the user that he will not find any faults or bugs when using the application.
-Several tests can be done to test functionality, usability, performance or security.</br>
-All in the end will have the same goal to bring the user the best app.
+The purpose of automated software testing is quality assurance and system reliability.</br>
+It gives _assurance_ that the features built in the application conform to the original specification and acceptance criteria.
+Several tests can be created to test functionality, usability, performance or security.</br>
 
 ## Types of Tests 
 
-There are several types of software tests, but of all the ones there are three that are most used when talking about Dart.
-unit, component and end-to-end are the most used.
+There are several types of software tests.
+In Dart the most commonly used tests are unit, component and end-to-end; usually in that order. 
 
 ### Unit Tests
 
-Unit tests are used to test small parts of code, such as a function, a class, or even a change made to the layout.
-They are used more than other tests because they make it easier to build an application.
+Unit tests are test small parts of code, such as a function, a class, or a change made to the layout.
+Every function must have at least one unit test. 
+A function with multiple possible outcomes must have multiple tests; one for each case.
+Each function should be responsible for doing one thing. 
+If your function does multiple things or you use the word "and" 
+when describing what a function does, 
+that's usually a [bad sign](https://en.wikipedia.org/wiki/Code_smell).
+We use small single responsibility tested functions to assemble a larger application.
+See: https://en.wikipedia.org/wiki/Single_responsibility_principle 
+and https://blog.codinghorror.com/curlys-law-do-one-thing/
 
 ### Component Tests
 
-Component tests are used to test several functions, or several tasks at the same time. It is used after the unit test is done.
+Components are composed of several smaller functions once all the unit tests for those functions are passing.
+Component tests test several functions or tasks assembled into a feature at the same time as a whole.
 
 ### End-To-End Tests
 
@@ -323,7 +331,7 @@ It helps us to have a perception of how we have to put the code, it serves to te
 
 ```package:mockito```
 
-It helps us to create objects separately and checks that this object has no errors after being put together with others.
+[Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit. 
 
 ## Dart VS Javascript:
 
@@ -342,7 +350,6 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
 
 
 
