@@ -302,12 +302,13 @@ It contains pieces of Dart code that are used in best practices.</br>
 
 To use this package just add a dependency in our pubspec.yaml:
 
-``pedantic: ^1.4.0``
-
+```dart
+pedantic: ^1.4.0``
+```
 Then to update the dependencies just use the command:
 
 
-``flutter packages get``
+```flutter packages get```
 
 
 
