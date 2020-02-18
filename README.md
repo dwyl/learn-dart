@@ -284,6 +284,7 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 - Class
 - Method
 
+
 ## Effective Code in Flutter 
 (https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273) 
 
@@ -317,6 +318,52 @@ Then to update the dependencies just use the command:
 
 
 
+## Dart Testing
+
+The purpose of automated software testing is quality assurance and system reliability.</br>
+It gives _assurance_ that the features built in the application conform to the original specification and acceptance criteria.
+Several tests can be created to test functionality, usability, performance or security.</br>
+
+## Types of Tests 
+
+There are several types of software tests.
+In Dart the most commonly used tests are unit, component and end-to-end; usually in that order. 
+
+### Unit Tests
+
+Unit tests are test small parts of code, such as a function, a class, or a change made to the layout.
+Every function must have at least one unit test. 
+A function with multiple possible outcomes must have multiple tests; one for each case.
+Each function should be responsible for doing one thing. 
+If your function does multiple things or you use the word "and" 
+when describing what a function does, 
+that's usually a [bad sign](https://en.wikipedia.org/wiki/Code_smell).
+We use small single responsibility tested functions to assemble a larger application.
+See: https://en.wikipedia.org/wiki/Single_responsibility_principle 
+and https://blog.codinghorror.com/curlys-law-do-one-thing/
+
+### Component Tests
+
+Components are composed of several smaller functions once all the unit tests for those functions are passing.
+Component tests test several functions or tasks assembled into a feature at the same time as a whole.
+
+### End-To-End Tests
+
+The end-to-end tests are used to test entire applications or most of them on real devices, or a browser.
+
+## Useful libraries in Dart
+
+There are also some libraries that can be useful when talking about Dart:
+
+```package:test```
+
+It helps us to have a perception of how we have to put the code, it serves to test small codes or big codes. 
+
+```package:mockito```
+
+[Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit. 
+
+
 ## Dart VS Javascript:
 
 Dart:
@@ -334,3 +381,4 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
+
