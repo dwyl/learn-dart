@@ -284,7 +284,8 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 - Class
 - Method
 
-## Effective Code in Flutter
+## Effective Code in Flutter 
+(https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273) 
 
 The `Dart` language is familiar to most developers used to object oriented programming. 
 There are a few best practices worth learning to ensure success.</br>
@@ -307,7 +308,7 @@ It contains pieces of Dart code that are used in best practices.</br>
 To use this package just add a dependency in our pubspec.yaml:
 
 ```dart
-pedantic: ^1.4.0``
+pedantic: ^1.4.0
 ```
 Then to update the dependencies just use the command:
 
