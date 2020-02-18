@@ -286,6 +286,8 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 
 
 ## Effective Code in Flutter 
+
+This section is a summary of the Effective Dart in Flutter article by Google Developer Expert Katarina Sheremet:
 https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273
 
 The `Dart` language is familiar to most developers used to object oriented programming. 
