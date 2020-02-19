@@ -277,7 +277,6 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 
 Dart is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
 
-
 - Object
 - State
 - Behavior
@@ -285,6 +284,39 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 - Class
 - Method
 
+
+## Effective Code in Flutter 
+
+This section is a summary of the Effective Dart in Flutter article by Google Developer Expert Katarina Sheremet:
+https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273
+
+The `Dart` language is familiar to most developers used to object oriented programming. 
+There are a few best practices worth learning to ensure success.</br>
+There are some tools that can make the process easier:
+
+
+## Dartanalyzer
+
+[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br> 
+
+This is an example of performing static analysis 
+over all the Dart files under the lib and test directories:
+`dartanalyzer lib test`
+
+## Pedantic Package
+
+The [pedantic](https://pub.dev/packages/pedantic) package shows how static analysis is used internally at Google.
+It contains pieces of Dart code that are used in best practices.</br>
+
+To use this package just add a dependency in our pubspec.yaml:
+
+```dart
+pedantic: ^1.4.0
+```
+Then to update the dependencies just use the command:
+
+
+```flutter packages get```
 
 
 
@@ -333,6 +365,7 @@ It helps us to have a perception of how we have to put the code, it serves to te
 
 [Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit. 
 
+
 ## Dart VS Javascript:
 
 Dart:
@@ -350,14 +383,3 @@ Javascript:
 - Comes with lots of great and popular frameworks
 - Fast, light-weight and flexible
 - Can’t run a device which doesn’t use JavaScript today
-
-
-
-
-
-
-
-
-
-
-
