@@ -6,7 +6,7 @@ to build cross-platform (Mobile, Web and Desktop) Apps with Flutter!
 
 ## Why?
 
-`Dart` lets you build Apps for _any_ platform 
+`Dart` lets you build Apps for _any_ platform
 with a native interface and performance.
 
 
@@ -19,22 +19,22 @@ with a native interface and performance.
 `Dart` can be compiled to run as high performance JavaScript in web browsers,
 or as a native app on mobile (iOS + Android)
 and desktop.
-Is an object-oriented language with C-style syntax 
-familiar to all developers who have used 
+Is an object-oriented language with C-style syntax
+familiar to all developers who have used
 an Object Oriented Progrramming (OOP) language.
-It supports a varied range of programming aids like interfaces, 
+It supports a varied range of programming aids like interfaces,
 classes, collections, generics, and optional typing.
 
 `Dart` was created by Lars Bak and Kasper Lund
 while working for Google.
-`Dart` is approved as a standard by 
+`Dart` is approved as a standard by
 the European Computer Manufacturers Association
 [ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm).</br>
 The language syntax and semantics are stable don't change.
 
 Read more:
 
-+ Official guides: 
++ Official guides:
 https://dart.dev/guides
 + Dart Pad (_lets you try/share any `Dart` code examples online_):
 https://dartpad.dartlang.org
@@ -48,57 +48,32 @@ https://en.wikipedia.org/wiki/Dart_(programming_language)
 
 ## Who ?
 
-This tutorial will be quite helpful for all those developers who want to develop single-page web applications using Dart. It is meant for programmers with a strong hold on object-oriented concepts.
-
-## Why use `Dart` ?
-
-### Pros And Cons:
-
-Pros Include:
-- Familiar language
-- Built-in package manager
-- Compiles to JavaScript
-- `Dart` runs on the server, with bundles for http server, web sockets, files, directories, and more
-- Full reflection API (mirrors)
+This tutorial is for anyone
 
 
-Cons Include:
-- Not as mature as Java
-- Not as many packages as Node.js
+
+## How?
 
 
-## `Dart` Installation:
+### Installation:
 
-Install using Chocolatey.(https://chocolatey.org/).
-
-First install Chocolatey, then go to your command line or to the powershell and run this command:
-
-![Screen Shot 2020-01-09 at 14 55 49](https://user-images.githubusercontent.com/27420533/72078304-c06b0380-32f0-11ea-894b-9e5f1e58b882.png)
-
-To upgrade the `Dart` SDK, run this command:
-
-![Screen Shot 2020-01-09 at 14 56 38](https://user-images.githubusercontent.com/27420533/72078414-f1e3cf00-32f0-11ea-82b1-14f3d4979dc1.png)
+The official installation instructions are:
+https://dart.dev/get-dart
 
 
-Install using a setup wizard.
-Alternatively, use the community-supported `Dart` SDK installer for Windows.(https://gekorm.com/dart-windows/).
+
+### Windows?
+
+Install the Flutter SDK which includes Dart:
+https://flutter.dev/docs/get-started/install/windows
 
 
-![Screen Shot 2020-01-09 at 15 04 24](https://user-images.githubusercontent.com/27420533/72078636-60289180-32f1-11ea-91ed-46531d9c63c2.png)
-
-On completion of the SDK installation, set the PATH environment variable to −
 
 
-![Screen Shot 2020-01-09 at 15 08 03](https://user-images.githubusercontent.com/27420533/72078959-fbba0200-32f1-11ea-90c1-fb7a1912ccb4.png)
-
-Verifying the Installation</br>
-To verify if `Dart` has been successfully installed, open the command prompt and enter the following command −
-
-![Screen Shot 2020-01-09 at 15 08 29](https://user-images.githubusercontent.com/27420533/72079018-14c2b300-32f2-11ea-98e3-87ba97f41faa.png)
 
 ## `Dart` Syntax:
 
-Syntax defines a set of rules for writing programs. Every language specification defines its own syntax. 
+Syntax defines a set of rules for writing programs. Every language specification defines its own syntax.
 A `Dart` program is composed of −
 
 - Variables and Operators
@@ -167,7 +142,7 @@ a = 'hello'; //error as a is defined to only be assigned with a value of type in
 #### The `final` keyword
 
 `final` can be used to create a constant.
-A constant _must_ be declared and initialised at the same time 
+A constant _must_ be declared and initialised at the same time
 and cannot be changed once it has been declared.
 
 ```dart
@@ -208,13 +183,13 @@ const int a = 42;
 **error**
 ```dart
 const int a = 42;
-a = 52; // attempting to assign a new value to a constant. 
+a = 52; // attempting to assign a new value to a constant.
 ```
 
 #### The `dynamic` keyword
 
 The `dynamic` keyword is used to create a variable that
-can contain values of different types. It should be used sparingly 
+can contain values of different types. It should be used sparingly
 otherwise we lose the primary benefit of a statically typed language.
 
 ```dart
@@ -234,7 +209,7 @@ a = 42;
 ## Asynchronous events
 
 `Dart` provides the `Future` class to represent asynchronous events.
-For example the following `hello` function will return a `String`  in a near future: 
+For example the following `hello` function will return a `String`  in a near future:
 
 ```dart
 Future<String> hello() { // The type parameter of Future is a String, represented by <String>
@@ -242,8 +217,8 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 }
 ```
 
-A function with a return type of `Future<T>` (where `T` represents any type) 
-can have _three_ possible return states: 
+A function with a return type of `Future<T>` (where `T` represents any type)
+can have _three_ possible return states:
 `Uncompleted`, `Completed ` (_with_) ***success*** and `Completed` (_with_) ***error***
 When completed the function will return the type `T`, in our case the `hello` function returns a `String`.
 If an error occurs then the function will return an `Error`.
@@ -322,21 +297,21 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 - Method
 
 
-## Effective Code in Flutter 
+## Effective Code in Flutter
 
 This section is a summary of the Effective `Dart` in Flutter article by Google Developer Expert Katarina Sheremet:
 https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273
 
-The `Dart` language is familiar to most developers used to object oriented programming. 
+The `Dart` language is familiar to most developers used to object oriented programming.
 There are a few best practices worth learning to ensure success.</br>
 There are some tools that can make the process easier:
 
 
 ## Dartanalyzer
 
-[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br> 
+[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br>
 
-This is an example of performing static analysis 
+This is an example of performing static analysis
 over all the `Dart` files under the lib and test directories:
 `dartanalyzer lib test`
 
@@ -363,22 +338,22 @@ The purpose of automated software testing is quality assurance and system reliab
 It gives _assurance_ that the features built in the application conform to the original specification and acceptance criteria.
 Several tests can be created to test functionality, usability, performance or security.</br>
 
-## Types of Tests 
+## Types of Tests
 
 There are several types of software tests.
-In `Dart` the most commonly used tests are unit, component and end-to-end; usually in that order. 
+In `Dart` the most commonly used tests are unit, component and end-to-end; usually in that order.
 
 ### Unit Tests
 
 Unit tests are test small parts of code, such as a function, a class, or a change made to the layout.
-Every function must have at least one unit test. 
+Every function must have at least one unit test.
 A function with multiple possible outcomes must have multiple tests; one for each case.
-Each function should be responsible for doing one thing. 
-If your function does multiple things or you use the word "and" 
-when describing what a function does, 
+Each function should be responsible for doing one thing.
+If your function does multiple things or you use the word "and"
+when describing what a function does,
 that's usually a [bad sign](https://en.wikipedia.org/wiki/Code_smell).
 We use small single responsibility tested functions to assemble a larger application.
-See: https://en.wikipedia.org/wiki/Single_responsibility_principle 
+See: https://en.wikipedia.org/wiki/Single_responsibility_principle
 and https://blog.codinghorror.com/curlys-law-do-one-thing/
 
 ### Component Tests
@@ -396,11 +371,11 @@ There are also some libraries that can be useful when talking about Dart:
 
 ```package:test```
 
-It helps us to have a perception of how we have to put the code, it serves to test small codes or big codes. 
+It helps us to have a perception of how we have to put the code, it serves to test small codes or big codes.
 
 ```package:mockito```
 
-[Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit. 
+[Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit.
 
 
 ## `Dart` VS Javascript:
