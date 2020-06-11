@@ -104,6 +104,7 @@ A `Dart` program is composed of:
 + Comments
 + Libraries and Packages
 
+<br />
 
 ### Variables
 
@@ -114,18 +115,20 @@ There are several ways to define variables in Dart:
 ```dart
 var a;
 a = 42;
-a = 'hello'
 ```
 
 In this example the variable `a` is first declared,
 then initialised on the next line.
-On the last line the new `'hello'` value is assigned to `a`.
 
-However because `Dart` is a
-[statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
-the following code won't compile as `a`
-is declared and initialised (as an `int`) at the same time,
-so attempting to reassign it as `String` on the next line will fail.
+In the following example we attempt to
+re-assign the variable `a` to a `String`,
+however since
+`Dart`
+[statically typed](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
+the code won't compile.
+`a` is initialised as an `int`,
+so attempting to reassign it as `String`
+on the next line will fail:
 
 **error**
 ```dart
