@@ -1,19 +1,56 @@
-# learn-dart
-Learn the Dart programming language to build cross-platform (Mobile, Web &amp; Desktop) Apps with Flutter!
+# Learn `Dart`
+
+Learn the `Dart` programming language [dart.dev](https://dart.dev)
+to build cross-platform (Mobile, Web and Desktop) Apps with Flutter!
+
+
+## Why?
+
+`Dart` lets you build Apps for _any_ platform 
+with a native interface and performance.
+
+
+
+<br />
 
 ## What ?
 
-Dart is an open-source general-purpose programming language. It is originally developed by Google and later approved as a standard by ECMA.</br>
-Dart is a new programming language meant for the server as well as the browser. Introduced by Google, the Dart SDK ships with its compiler – the Dart VM.</br>
-The SDK also includes a utility -dart2js, a transpiler that generates JavaScript equivalent of a Dart Script.</br> 
-Is an object-oriented language with C-style syntax which can optionally trans compile into JavaScript. It supports a varied range of programming aids like interfaces, classes, collections, generics, and optional typing.
+`Dart` is an open-source general-purpose programming language.
+`Dart` can be compiled to run as high performance JavaScript in web browsers,
+or as a native app on mobile (iOS + Android)
+and desktop.
+Is an object-oriented language with C-style syntax 
+familiar to all developers who have used 
+an Object Oriented Progrramming (OOP) language.
+It supports a varied range of programming aids like interfaces, 
+classes, collections, generics, and optional typing.
 
+`Dart` was created by Lars Bak and Kasper Lund
+while working for Google.
+`Dart` is approved as a standard by 
+the European Computer Manufacturers Association
+[ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm).</br>
+The language syntax and semantics are stable don't change.
+
+Read more:
+
++ Official guides: 
+https://dart.dev/guides
++ Dart Pad (_lets you try/share any `Dart` code examples online_):
+https://dartpad.dartlang.org
++ Wikipedia article has the history:
+https://en.wikipedia.org/wiki/Dart_(programming_language)
+
+
+
+
+<br />
 
 ## Who ?
 
 This tutorial will be quite helpful for all those developers who want to develop single-page web applications using Dart. It is meant for programmers with a strong hold on object-oriented concepts.
 
-## Why use Dart ?
+## Why use `Dart` ?
 
 ### Pros And Cons:
 
@@ -21,7 +58,7 @@ Pros Include:
 - Familiar language
 - Built-in package manager
 - Compiles to JavaScript
-- Dart runs on the server, with bundles for http server, web sockets, files, directories, and more
+- `Dart` runs on the server, with bundles for http server, web sockets, files, directories, and more
 - Full reflection API (mirrors)
 
 
@@ -30,7 +67,7 @@ Cons Include:
 - Not as many packages as Node.js
 
 
-## Dart Installation:
+## `Dart` Installation:
 
 Install using Chocolatey.(https://chocolatey.org/).
 
@@ -38,13 +75,13 @@ First install Chocolatey, then go to your command line or to the powershell and 
 
 ![Screen Shot 2020-01-09 at 14 55 49](https://user-images.githubusercontent.com/27420533/72078304-c06b0380-32f0-11ea-894b-9e5f1e58b882.png)
 
-To upgrade the Dart SDK, run this command:
+To upgrade the `Dart` SDK, run this command:
 
 ![Screen Shot 2020-01-09 at 14 56 38](https://user-images.githubusercontent.com/27420533/72078414-f1e3cf00-32f0-11ea-82b1-14f3d4979dc1.png)
 
 
 Install using a setup wizard.
-Alternatively, use the community-supported Dart SDK installer for Windows.(https://gekorm.com/dart-windows/).
+Alternatively, use the community-supported `Dart` SDK installer for Windows.(https://gekorm.com/dart-windows/).
 
 
 ![Screen Shot 2020-01-09 at 15 04 24](https://user-images.githubusercontent.com/27420533/72078636-60289180-32f1-11ea-91ed-46531d9c63c2.png)
@@ -55,14 +92,14 @@ On completion of the SDK installation, set the PATH environment variable to −
 ![Screen Shot 2020-01-09 at 15 08 03](https://user-images.githubusercontent.com/27420533/72078959-fbba0200-32f1-11ea-90c1-fb7a1912ccb4.png)
 
 Verifying the Installation</br>
-To verify if Dart has been successfully installed, open the command prompt and enter the following command −
+To verify if `Dart` has been successfully installed, open the command prompt and enter the following command −
 
 ![Screen Shot 2020-01-09 at 15 08 29](https://user-images.githubusercontent.com/27420533/72079018-14c2b300-32f2-11ea-98e3-87ba97f41faa.png)
 
-## Dart Syntax:
+## `Dart` Syntax:
 
 Syntax defines a set of rules for writing programs. Every language specification defines its own syntax. 
-A Dart program is composed of −
+A `Dart` program is composed of −
 
 - Variables and Operators
 - Classes
@@ -88,7 +125,7 @@ In this example the variable `a` is first declared,
 then initialised on the next line.
 On the last line the new `'hello'` value is assigned to `a`.
 
-However because Dart is a [statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
+However because `Dart` is a [statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
 the following code won't compile as `a` is declared and initialised at the same time,
 i.e. `a` is created and linked to values with a specific type (_`int`_)
 
@@ -117,7 +154,7 @@ It is also possible to declare and assign a value to a variable at the same time
 int a = 42;
 ```
 
-However Dart will produce an error if multiple assignements are done
+However `Dart` will produce an error if multiple assignements are done
 with different type of values:
 
 **error**
@@ -196,7 +233,7 @@ a = 42;
 
 ## Asynchronous events
 
-Dart provides the `Future` class to represent asynchronous events.
+`Dart` provides the `Future` class to represent asynchronous events.
 For example the following `hello` function will return a `String`  in a near future: 
 
 ```dart
@@ -275,7 +312,7 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 
 ## Object-Oriented Programming in Dart
 
-Dart is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
+`Dart` is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
 
 - Object
 - State
@@ -287,7 +324,7 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 
 ## Effective Code in Flutter 
 
-This section is a summary of the Effective Dart in Flutter article by Google Developer Expert Katarina Sheremet:
+This section is a summary of the Effective `Dart` in Flutter article by Google Developer Expert Katarina Sheremet:
 https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273
 
 The `Dart` language is familiar to most developers used to object oriented programming. 
@@ -300,13 +337,13 @@ There are some tools that can make the process easier:
 [`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br> 
 
 This is an example of performing static analysis 
-over all the Dart files under the lib and test directories:
+over all the `Dart` files under the lib and test directories:
 `dartanalyzer lib test`
 
 ## Pedantic Package
 
 The [pedantic](https://pub.dev/packages/pedantic) package shows how static analysis is used internally at Google.
-It contains pieces of Dart code that are used in best practices.</br>
+It contains pieces of `Dart` code that are used in best practices.</br>
 
 To use this package just add a dependency in our pubspec.yaml:
 
@@ -320,7 +357,7 @@ Then to update the dependencies just use the command:
 
 
 
-## Dart Testing
+## `Dart` Testing
 
 The purpose of automated software testing is quality assurance and system reliability.</br>
 It gives _assurance_ that the features built in the application conform to the original specification and acceptance criteria.
@@ -329,7 +366,7 @@ Several tests can be created to test functionality, usability, performance or se
 ## Types of Tests 
 
 There are several types of software tests.
-In Dart the most commonly used tests are unit, component and end-to-end; usually in that order. 
+In `Dart` the most commonly used tests are unit, component and end-to-end; usually in that order. 
 
 ### Unit Tests
 
@@ -366,12 +403,12 @@ It helps us to have a perception of how we have to put the code, it serves to te
 [Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit. 
 
 
-## Dart VS Javascript:
+## `Dart` VS Javascript:
 
 Dart:
 
 - Backed by Google
-- In some instances, Dart is up to [twice the speed](https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/dart.html) of JavaScript
+- In some instances, `Dart` is up to [twice the speed](https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/dart.html) of JavaScript
 - Quite scalable across projects
 - Like Java
 - Used extensively for the Flutter mobile UI framework
