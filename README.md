@@ -60,14 +60,34 @@ This tutorial is for anyone
 The official installation instructions are:
 https://dart.dev/get-dart
 
+### Mac
+
+The recommended approach is to use Homebrew [
+brew.sh](https://brew.sh)
+
+```sh
+brew tap dart-lang/dart
+brew install dart
+```
+
+If you then run:
+
+```
+dart --version
+```
+
+
+You should see something similar to:
+
+```
+Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
+```
 
 
 ### Windows?
 
 Install the Flutter SDK which includes Dart:
 https://flutter.dev/docs/get-started/install/windows
-
-
 
 
 
