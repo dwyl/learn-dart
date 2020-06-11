@@ -93,16 +93,17 @@ https://flutter.dev/docs/get-started/install/windows
 
 ## `Dart` Syntax:
 
-Syntax defines a set of rules for writing programs. Every language specification defines its own syntax.
-A `Dart` program is composed of −
+Syntax defines a set of rules for writing programs.
+A `Dart` program is composed of:
 
-- Variables and Operators
-- Classes
-- Functions
-- Expressions and Programming Constructs
-- Decision Making and Looping Constructs
-- Comments
-- Libraries and Packages
++ Variables and Operators
++ Classes
++ Functions
++ Expressions and Programming Constructs
++ Decision Making and Looping Constructs
++ Comments
++ Libraries and Packages
+
 
 ### Variables
 
@@ -120,15 +121,30 @@ In this example the variable `a` is first declared,
 then initialised on the next line.
 On the last line the new `'hello'` value is assigned to `a`.
 
-However because `Dart` is a [statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
-the following code won't compile as `a` is declared and initialised at the same time,
-i.e. `a` is created and linked to values with a specific type (_`int`_)
+However because `Dart` is a
+[statically typed language](https://dart.dev/faq#q-is-dart-a-statically-typed-language),
+the following code won't compile as `a`
+is declared and initialised (as an `int`) at the same time,
+so attempting to reassign it as `String` on the next line will fail.
 
 **error**
 ```dart
 var a = 42;
-a = 'hello'; //error as the variable a must have a value of type int
+a = 'hello';
 ```
+
+You will see the following error:
+
+```dart
+Error: A value of type 'String' can't be assigned to a variable of type 'int'.
+  a = 'hello';
+      ^
+Error: Compilation failed.
+```
+
+e.g: https://dartpad.dartlang.org/bea94fb6dec3a69799f1f040135489a0
+
+
 
 #### Type name
 
