@@ -6,46 +6,44 @@ Learn the [`Dart`](https://dart.dev) programming language
 to build cross-platform Native (Mobile, Web and Desktop) Apps 
 with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 
+<br />
 </div>
 
 ## Why?
 
 `Dart` lets you build Apps for _any_ platform
 with a native interface/experience and performance.
+If you want to build _Native_ Mobile Apps 
+that run at 
 
-
-<br />
 
 ## What ?
 
 `Dart` is an open-source general-purpose programming language.
-`Dart` can be compiled to run as high performance JavaScript in web browsers,
+It can be compiled to run as high performance JavaScript in web browsers,
 or as a native app on mobile (iOS + Android)
 and desktop.
 Is an object-oriented language with C-style syntax
 familiar to all developers who have used
-an Object Oriented Progrramming (OOP) language.
+an Object Oriented Progrramming (OOP) languages (e.g. `Java`, `C#`, `JavaScript`).
 It supports a varied range of programming aids like interfaces,
 classes, collections, generics, and optional typing.
 
 `Dart` was created by Lars Bak and Kasper Lund
 while working for Google.
-`Dart` is approved as a standard by
+`Dart` was made a official standard by
 the European Computer Manufacturers Association
-[ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm).</br>
-The language syntax and semantics are stable don't change.
+[ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm) in 2015.
+The language syntax and semantics are stable.
+There have not been any breaking changes for several years; only enhancements.
 
 Read more:
 
 + Official guides:
 https://dart.dev/guides
-+ Dart Pad (_lets you try/share any `Dart` code examples online_):
-https://dartpad.dartlang.org
 + Wikipedia article has the history:
 https://en.wikipedia.org/wiki/Dart_(programming_language)
 
-
-<br />
 
 ## Who?
 
@@ -69,6 +67,13 @@ and follow along on your `localhost`.
 git clone git@github.com:dwyl/learn-dart.git && cd learn-dart
 ```
 
+> **Note**: If you are unable to run code on your device 
+(e.g. you're reading this on an iPad),
+all examples have a link to 
+Dart Pad so you can try them online:
+https://dartpad.dartlang.org
+
+
 <br />
 
 ### Install `Dart`
@@ -88,19 +93,6 @@ brew tap dart-lang/dart
 brew install dart
 ```
 
-If you then run:
-
-```
-dart --version
-```
-
-You should see something similar to:
-
-```
-Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
-```
-
-> You may have more _recent_ version of `Dart`; that's fine!
 
 <br />
 
@@ -125,9 +117,89 @@ Yes, Mac is also proprietary, but it's not actively malicious.
 
 <br />
 
+Once you have `Dart` installed, 
+if you run the following terminal command:
+
+```sh
+dart --version
+```
+
+You should see something similar to:
+
+```sh
+Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
+```
+
+> You may have more _recent_ version of `Dart`; that's fine!
+
+
+<br />
+
+## Hello World!
+
+Once you have installed `Dart` on your `localhost` 
+(_or opened [Dart Pad](https://dartpad.dartlang.org) 
+if you are unable to install it on your mobile device_),
+open your text editor of choice
+and create a file called `main.dart`
+
+Then _type_ the following code:
+
+```dart
+main() {
+  print('Hello World!');
+}
+```
+
+This code creates a function called `main` 
+which calls `print` with our desired `String` `'Hello World!'`.
+The function does not _return_ anything 
+
+
+Now in your terminal window,
+execute the program by typing: 
+
+```sh
+dart main.dart
+```
+
+You should see:
+
+```
+Hello World!
+```
+
+Try it: https://dartpad.dartlang.org/fa6f6e5a7b9406e88b31a17e82655ef8
+
+
+<br />
+
+By convention, you will often see the `main` function 
+prefixed with the `void` keyword/type, e.g:
+
+```dart
+void main() {
+  print('Hello World!');
+}
+```
+
+This just means that our `main` function will not return anything.
+It's safe to ommit the `void` keywork as it is in _inferred_ by the compiler.
+We checked: 
+https://stackoverflow.com/questions/62346301/does-dart-main-function
+
+
+> If you are curious about the `void` keyword, read: <br />
+> + https://en.wikipedia.org/wiki/Void_type
+> + https://medium.com/flutter-community/the-curious-case-of-void-in-dart-f0535705e529
+> + https://medium.com/dartlang/dart-2-legacy-of-the-void-e7afb5f44df0
+
+
 ## `Dart` Syntax:
 
-Syntax defines a set of rules for writing programs.
+Syntax is reasonably concise compared to other languages like `Java` or `JavaScript`.
+
+defines a set of rules for writing programs.
 A `Dart` program is composed of:
 
 + Variables and Operators
