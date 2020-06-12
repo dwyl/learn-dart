@@ -13,8 +13,9 @@ with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 
 `Dart` lets you build Apps for _any_ platform
 with a native interface/experience and performance.
-If you want to build _Native_ Mobile Apps 
-that run at 
+If you want to build cross-platform _Native_ Mobile Apps 
+that don't waste memory and drain the devices battery,
+use `Dart` and `Flutter`.
 
 
 ## What ?
@@ -28,14 +29,20 @@ familiar to all developers who have used
 an Object Oriented Progrramming (OOP) languages (e.g. `Java`, `C#`, `JavaScript`).
 It supports a varied range of programming aids like interfaces,
 classes, collections, generics, and optional typing.
+Don't worry if these terms are unfamilar right now,
+you will learn their use through examples below.
 
 `Dart` was created by Lars Bak and Kasper Lund
 while working for Google.
-`Dart` was made a official standard by
+`Dart` was made an official standard by
 the European Computer Manufacturers Association
 [ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm) in 2015.
-The language syntax and semantics are stable.
-There have not been any breaking changes for several years; only enhancements.
+The language syntax and semantics are **stable**.
+
+Because `Dart` is used in `Flutter`
+it is the fastest growing programming language 
+https://flutter.dev/showcase
+
 
 Read more:
 
@@ -140,8 +147,12 @@ Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
 Once you have installed `Dart` on your `localhost` 
 (_or opened [Dart Pad](https://dartpad.dartlang.org) 
 if you are unable to install it on your mobile device_),
-open your text editor of choice
-and create a file called `hello.dart`
+open your text 
+[editor of choice](https://github.com/dwyl/dev-setup/issues/37)
+create a directory called [`/examples`]()
+and _inside_ that directory,
+create a file with path 
+[`examples/hello.dart`]()
 
 Then _type_ the following code:
 
@@ -154,7 +165,8 @@ main() {
 e.g: 
 
 This code creates a function called `main` 
-which calls `print` with our desired `String` `'Hello World!'`.
+which calls `print` 
+with our desired `String` `'Hello World!'`.
 The function does not _return_ anything 
 
 
@@ -162,7 +174,7 @@ Now in your terminal window,
 execute the program by typing: 
 
 ```sh
-dart hello.dart
+dart examples/hello.dart
 ```
 
 You should see:
@@ -171,7 +183,7 @@ You should see:
 Hello World!
 ```
 
-Try it: https://dartpad.dartlang.org/fa6f6e5a7b9406e88b31a17e82655ef8
+> Try it: https://dartpad.dartlang.org/fa6f6e5a7b9406e88b31a17e82655ef8
 
 ![dart-pad-hello-world-example](https://user-images.githubusercontent.com/194400/84514887-a54b5800-acc3-11ea-80bf-4ca4f39d1869.png)
 
@@ -202,6 +214,57 @@ https://stackoverflow.com/questions/62346301/does-dart-main-function
 <br />
 
 ## Variables
+
+The next thing you need to know in `Dart` 
+is how to create variables (_or constants_)
+to store your data.
+
+
+### Using the `var` Keyword
+
+The most basic way of defining variables 
+is using the `var` keyword.
+Create a new file with the path:
+[`examples/var.dart`]()
+and type the following code in it:
+
+```dart
+main() {
+  var name = 'Alex'; // or whatever your name is! 
+  print('Hello $name'); 
+}
+```
+Change the _value_ `name` to whatever your name is.
+
+Once you have saved the file,
+run it with the command:
+
+```sh
+dart examples/var.dart
+```
+
+You should see output similar to the following:
+
+```
+Hello Alex!
+```
+
+> Try it: https://dartpad.dartlang.org/560f88da44b108ffe34e6979079246ea
+
+![dart-pad-variables-example](https://user-images.githubusercontent.com/194400/84532536-4e9f4780-acde-11ea-9bfd-7f6f0c8bcb1b.png)
+
+
+_Explanation_ of the code:
++ `main() {` - is familiar from the previous example,
+it's the top-level function that dart invokes to run the program.
++ `var name = 'Alex';` - this is our variable definition using the `var` keyword. We _assign_ the value `'Alex'` 
+to the variable `name`. 
++ `print('Hello $name');` - prints the `String` `'Hello` 
+followed by the variable `name` we defined on the previous line.
+The inclusion of the `$` (dollar sign) in the `$name` 
+is the way to include a variable inside the `String`.
+This is knonw as 
+[String interpolation](https://dart.dev/guides/language/language-tour#strings).
 
 
 
