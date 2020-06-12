@@ -1,6 +1,6 @@
 <div align="center">
 
-# Learn `Dart` <img src="https://user-images.githubusercontent.com/194400/84484028-1540ea80-ac92-11ea-8aa3-1e525c63622e.jpg"/>
+![learn-dart-hero-image](https://user-images.githubusercontent.com/194400/84486386-40790900-ac95-11ea-916b-e27c1d141056.png "Learn Dart intro image")
 
 Learn the `Dart` programming language [dart.dev](https://dart.dev)
 to build cross-platform (Mobile, Web and Desktop) Apps with Flutter!
