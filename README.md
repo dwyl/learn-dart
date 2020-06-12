@@ -2,8 +2,9 @@
 
 ![learn-dart-hero-image](https://user-images.githubusercontent.com/194400/84486386-40790900-ac95-11ea-916b-e27c1d141056.png "Learn Dart intro image")
 
-Learn the `Dart` programming language [dart.dev](https://dart.dev)
-to build cross-platform (Mobile, Web and Desktop) Apps with Flutter!
+Learn the [`Dart`](https://dart.dev) programming language 
+to build cross-platform Native (Mobile, Web and Desktop) Apps 
+with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 
 </div>
 
