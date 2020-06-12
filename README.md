@@ -141,7 +141,7 @@ Once you have installed `Dart` on your `localhost`
 (_or opened [Dart Pad](https://dartpad.dartlang.org) 
 if you are unable to install it on your mobile device_),
 open your text editor of choice
-and create a file called `main.dart`
+and create a file called `hello.dart`
 
 Then _type_ the following code:
 
@@ -150,6 +150,8 @@ main() {
   print('Hello World!');
 }
 ```
+
+e.g: 
 
 This code creates a function called `main` 
 which calls `print` with our desired `String` `'Hello World!'`.
@@ -160,7 +162,7 @@ Now in your terminal window,
 execute the program by typing: 
 
 ```sh
-dart main.dart
+dart hello.dart
 ```
 
 You should see:
@@ -186,15 +188,23 @@ void main() {
 ```
 
 This just means that our `main` function will not return anything.
-It's safe to ommit the `void` keywork as it is in _inferred_ by the compiler.
+In this case it's safe to ommit the `void` keywork 
+as it is in _inferred_ by the compiler.
 We checked: 
 https://stackoverflow.com/questions/62346301/does-dart-main-function
 
 
-> If you are curious about the `void` keyword, read: <br />
+> If see the `void` keyword and are curious about it, read: <br />
 > + https://en.wikipedia.org/wiki/Void_type
 > + https://medium.com/flutter-community/the-curious-case-of-void-in-dart-f0535705e529
 > + https://medium.com/dartlang/dart-2-legacy-of-the-void-e7afb5f44df0
+
+<br />
+
+## Variables
+
+
+
 
 
 ## `Dart` Syntax:
