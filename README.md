@@ -1,14 +1,16 @@
-# Learn `Dart`
+<div align="center">
+
+# Learn `Dart` <img src="https://user-images.githubusercontent.com/194400/84484028-1540ea80-ac92-11ea-8aa3-1e525c63622e.jpg"/>
 
 Learn the `Dart` programming language [dart.dev](https://dart.dev)
 to build cross-platform (Mobile, Web and Desktop) Apps with Flutter!
 
+</div>
 
 ## Why?
 
 `Dart` lets you build Apps for _any_ platform
-with a native interface and performance.
-
+with a native interface/experience and performance.
 
 
 <br />
@@ -42,28 +44,43 @@ https://dartpad.dartlang.org
 https://en.wikipedia.org/wiki/Dart_(programming_language)
 
 
+<br />
 
+## Who?
+
+This tutorial is for anyone who wants to learn `Dart` from scratch
+without any prior knowledge of other programming languages.
+Learning `Dart` is a precursor for learning `Flutter`
+for building cross-platform native mobile/desktop/web Apps.
+Let's face it, very few people are using `Dart` outside of `Flutter`;
+anyone that needs _general purpose_ programming laguage uses `Python`.
+If you want to build `Flutter` Apps, learn `Dart`;
+this tutorial is the perfect place to start.
 
 <br />
 
-## Who ?
-
-This tutorial is for anyone
-
-
-
 ## How?
 
+We recommend that you clone this repository 
+and follow along on your `localhost`.
 
-### Installation:
+```sh
+git clone git@github.com:dwyl/learn-dart.git && cd learn-dart
+```
+
+<br />
+
+### Install `Dart`
 
 The official installation instructions are:
 https://dart.dev/get-dart
 
+<br />
+
 ### Mac
 
-The recommended approach is to use Homebrew [
-brew.sh](https://brew.sh)
+The recommended approach is to use Homebrew 
+[brew.sh](https://brew.sh)
 
 ```sh
 brew tap dart-lang/dart
@@ -76,12 +93,20 @@ If you then run:
 dart --version
 ```
 
-
 You should see something similar to:
 
 ```
 Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
 ```
+
+> You may have more _recent_ version of `Dart`; that's fine!
+
+<br />
+
+### Linux
+
+Follow the official instructions for your distribution on 
+https://dart.dev/get-dart
 
 
 ### Windows?
@@ -89,7 +114,15 @@ Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
 Install the Flutter SDK which includes Dart:
 https://flutter.dev/docs/get-started/install/windows
 
+<!-- 
+We don't *want* detailed Windows installation instructions 
+because we don't *use* windows for any development work. 
+Read: https://www.gnu.org/proprietary/malware-microsoft.html
+Anyone using Windows for should install/dual-boot Linux. 
+Yes, Mac is also proprietary, but it's not actively malicious.
+-->
 
+<br />
 
 ## `Dart` Syntax:
 
@@ -149,7 +182,7 @@ e.g: https://dartpad.dartlang.org/bea94fb6dec3a69799f1f040135489a0
 
 
 
-#### Type name
+#### Types
 
 ```dart
 int a;
