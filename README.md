@@ -11,11 +11,51 @@ with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 
 ## Why?
 
+`Dart` is a general purpose programming language
+that can be used for Servers, Client Apps, Native Mobile Apps
+and _everything_ in between!
+Google uses `Dart` for the Google Home Hub
+and they are using `Dart` for their 
+["Ambient Computing"](https://youtu.be/7yexspE0prM)
+initiative.
+
 `Dart` lets you build Apps for _any_ platform
 with a native interface/experience and performance.
 If you want to build cross-platform _Native_ Mobile Apps 
-that don't waste memory and drain the devices battery,
+that don't waste memory or drain the devices' battery,
 use `Dart` and `Flutter`.
+
+`Flutter` is the second fastest growing project on GitHub:
+https://octoverse.github.com/#top-and-trending-projects
+
+![flutter-to-trending-project](https://user-images.githubusercontent.com/194400/84572723-e3b04800-ad93-11ea-85e2-19e9693e5a26.png)
+
+`Dart` is fastest growing programming language:
+https://octoverse.github.com/#top-languages
+
+![github-top-programming-languages](https://user-images.githubusercontent.com/194400/84571947-b44b0c80-ad8e-11ea-8089-de0672e9e6d1.png)
+
+It's worth paying attention to these growth stats.
+
+
+
+Let's face it, you're not reading this because you want
+to learn another general purpose language. 
+For that you would learn/use `Python` or `JavaScript`.
+You are here for the same reason as we are,
+to learn `Dart` as fast as possible,
+so that you can use `Flutter` to build Native Apps. 
+
+
+
+You are here for the same reason as us,
+to learn `Dart` as fast as possible,
+so that you can build `Flutter` Apps.
+
+because you very few people are using `Dart` outside of `Flutter`;
+anyone that needs _general purpose_ programming laguage uses `Python`.
+If you want to build `Flutter` Apps, learn `Dart`;
+this tutorial is the perfect place to start.
 
 
 ## What ?
@@ -26,7 +66,8 @@ or as a native app on mobile (iOS + Android)
 and desktop.
 Is an object-oriented language with C-style syntax
 familiar to all developers who have used
-an Object Oriented Progrramming (OOP) languages (e.g. `Java`, `C#`, `JavaScript`).
+an Object Oriented Programming (OOP) 
+language (e.g. `JavaScript`, `Java`, `C++`, `C#`, `Go`, etc.).
 It supports a varied range of programming aids like interfaces,
 classes, collections, generics, and optional typing.
 Don't worry if these terms are unfamilar right now,
@@ -39,9 +80,7 @@ the European Computer Manufacturers Association
 [ECMA 408](https://www.ecma-international.org/publications/standards/Ecma-408.htm) in 2015.
 The language syntax and semantics are **stable**.
 
-Because `Dart` is used in `Flutter`
-it is the fastest growing programming language 
-https://flutter.dev/showcase
+
 
 
 Read more:
@@ -56,28 +95,28 @@ https://en.wikipedia.org/wiki/Dart_(programming_language)
 
 This tutorial is for anyone who wants to learn `Dart` from scratch
 without any prior knowledge of other programming languages.
-Learning `Dart` is a precursor for learning `Flutter`
-for building cross-platform native mobile/desktop/web Apps.
-Let's face it, very few people are using `Dart` outside of `Flutter`;
-anyone that needs _general purpose_ programming laguage uses `Python`.
-If you want to build `Flutter` Apps, learn `Dart`;
-this tutorial is the perfect place to start.
+
+Learning `Dart` is a prerequisite 
+for building cross-platform native mobile/desktop/web Apps 
+with `Flutter`.
+
 
 <br />
 
 ## How?
 
-We recommend that you clone this repository 
-and follow along on your `localhost`.
+We recommend that you `clone` this Git repository 
+so that you can follow along on your `localhost`
+_offline_:
 
 ```sh
 git clone git@github.com:dwyl/learn-dart.git && cd learn-dart
 ```
 
 > **Note**: If you are unable to run code on your device 
-(e.g. you're reading this on an iPad),
+(e.g. you're reading this on an iPad), <br />
 all examples have a link to 
-Dart Pad so you can try them online:
+**Dart Pad** so you can try them online:
 https://dartpad.dartlang.org
 
 
@@ -88,7 +127,6 @@ https://dartpad.dartlang.org
 The official installation instructions are:
 https://dart.dev/get-dart
 
-<br />
 
 ### Mac
 
@@ -100,12 +138,10 @@ brew tap dart-lang/dart
 brew install dart
 ```
 
-
-<br />
-
 ### Linux
 
-Follow the official instructions for your distribution on 
+Follow the official instructions 
+for your version of Linux: 
 https://dart.dev/get-dart
 
 
@@ -148,7 +184,7 @@ Once you have installed `Dart` on your `localhost`
 (_or opened [Dart Pad](https://dartpad.dartlang.org) 
 if you are unable to install it on your mobile device_),
 open your text 
-[editor of choice](https://github.com/dwyl/dev-setup/issues/37)
+[editor of choice](https://github.com/dwyl/dev-setup/issues/37),
 create a directory called [`/examples`]()
 and _inside_ that directory,
 create a file with path 
@@ -163,6 +199,7 @@ main() {
 ```
 
 e.g: 
+
 
 This code creates a function called `main` 
 which calls `print` 
