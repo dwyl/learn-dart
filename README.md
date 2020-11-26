@@ -194,6 +194,16 @@ dynamic int a; // https://repl.it/repls/GreenDeadMatch
 a = 42;
 ```
 
+### main() function
+
+The main function is a top-level function (a function created outside of a class) which is required in all Dart programs.
+It is the starting point of your program. It usually has the type void.
+
+void main() {
+  print('hello');
+}
+The main function can take a list of string as a parameter.
+
 ### Arrow functions
 
 Arrow functions is a syntactic sugar expression to create one statement function.
