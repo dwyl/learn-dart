@@ -59,9 +59,9 @@ To verify if Dart has been successfully installed, open the command prompt and e
 
 ![Screen Shot 2020-01-09 at 15 08 29](https://user-images.githubusercontent.com/27420533/72079018-14c2b300-32f2-11ea-98e3-87ba97f41faa.png)
 
-## Dart Syntax:
+## Dart Syntax
 
-Syntax defines a set of rules for writing programs. Every language specification defines its own syntax. 
+Syntax defines a set of rules for writing programs. Every language specification defines its own syntax.
 A Dart program is composed of −
 
 - Variables and Operators
@@ -76,7 +76,7 @@ A Dart program is composed of −
 
 There are several ways to define variables in Dart:
 
-#### The keyword `var`:
+#### The keyword `var`
 
 ```dart
 var a;
@@ -193,6 +193,32 @@ we can't write the following:
 dynamic int a; // https://repl.it/repls/GreenDeadMatch
 a = 42;
 ```
+
+### Arrow functions
+
+Arrow functions is a syntactic sugar expression to create one statement function.
+
+```dart
+String hello() => 'hello'
+```
+
+is the same as
+
+```dart
+String hello() {
+    return 'hello';
+}
+```
+
+Arrow functions can also be used to create anonymous functions:
+
+```dart
+void main() {
+    var hello = () => 'hello';
+    print(a());
+}
+```
+
 
 ## Asynchronous events
 
