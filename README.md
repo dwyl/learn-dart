@@ -229,6 +229,43 @@ void main() {
 }
 ```
 
+### Named parameters
+
+Named parameters make it easier to understand which value is assigned to the argumment of a function.
+You define the parameters inside `{}` and when the function is called assign the values to the paremeters with ':':
+
+'''dart
+String hello({String firstName, String lastName}) {
+  return '$firstName $lastName';
+}
+
+void main() {
+    var myName = hello(firstName: 'bob', lastName: 'Smith');
+    print(myName);
+}
+'''
+
+By default named parameters are optional:
+
+'''dart
+String hello({String firstName, String lastName}) {
+  return '$firstName $lastName';
+}
+
+void main() {
+    var myName = hello(firstName: 'bob');
+    print(myName); // print 'bob null'
+}
+'''
+
+If you want a parameter to be mandatory you can anotate it with `@required`.
+You need first to import the 'meta' package which contains this anotation:
+`import 'package:meta/meta.dart';`
+
+Flutter also contains this anotation in the foundation.dart package:
+`import 'package:flutter/foundation.dart';`
+
+Select one of these two import depending if your project is a Flutter application or just a Dart program.
 
 ## Asynchronous events
 
