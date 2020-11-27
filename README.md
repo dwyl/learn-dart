@@ -232,6 +232,8 @@ void main() {
 ### Named parameters
 
 Named parameters make it easier to understand which value is assigned to the argumment of a function.
+Positional parameters rely on the order of the parameters given to the function. Named parameter instead rely on the name given to the parameter,
+and discard the order.
 You define the parameters inside `{}` and when the function is called assign the values to the paremeters with ':':
 
 '''dart
@@ -241,6 +243,7 @@ String hello({String firstName, String lastName}) {
 
 void main() {
     var myName = hello(firstName: 'bob', lastName: 'Smith');
+    var myNameAgain = hello(lastName: 'smith', firstName: 'bob'); // the order of the paramter doesn't matter
     print(myName);
 }
 '''
