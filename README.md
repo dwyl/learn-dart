@@ -360,6 +360,226 @@ Dart is an Object-Oriented language. Object Orientation is a software developmen
 - Class
 - Method
 
+### Constructor
+
+Constructors let you create an instance of a class.
+When creating a class, Dart will provide a default constructor for this class.
+
+```dart
+class Car {
+    String engine;
+}
+
+void main() {
+  Car myCar = Car(); //The Car() constructor is provided automatically
+  print(myCar); // print Instance of 'Car'
+}
+```
+
+You can also create a named constructor with the syntax `ClassName.constructorName`:
+
+```dart
+ class Car {
+     String engine;
+
+     Car.withEngine(String engine) {
+         this.engine ='engine $engine';
+     }
+ }
+```
+
+Dart also provides a syntax sugar for a constructor which assigned instance variable:
+
+```dart
+class Car {
+    String engine;
+
+    Car(this.engine); // Create a constructor which defined the engine value
+}
+
+void main() {
+    Car c = Car('electric');
+    print(c.engine);
+}
+```
+
+### Initializer list
+
+Initializer list are used to assigned values to instance variables:
+
+```dart
+class Pet {
+    final String name;
+    final int age;
+
+
+    Pet.initialise() : this.name = 'Bob', this.age = 2; // assigned default values to final variables
+
+    String getInfo() {
+        return 'name: $name, age: $age';
+    }
+}
+
+void main() {
+    Pet p = Pet.initialise();
+    print(p.getInfo());
+}
+```
+
+Initializer list can also be used to redirect a contstructor of a class to another one:
+
+```dart
+class Pet {
+    String name;
+
+    Pet(this.name); // create a constructor which set the name variable
+
+    Pet.setName(String name) : this(name); // redirect the setName constructor to the Pet(name) constructor
+}
+
+void main() {
+    Pet p = Pet.setName('Bob');
+    print(p.name);
+}
+```
+
+### inheritance
+
+A class can `extends` another class to create a sub class.
+A sub class can only extends one class only.
+
+```dart
+class Pet {
+    String name;
+
+    Pet() : name = 'Mike';
+}
+
+class Cat extends Pet {
+    Cat() {
+        name = 'Dave';
+    }
+}
+
+void main() {
+  Pet p = Pet();
+  Cat c = Cat();
+  print(p.name); // print Mike 
+  print(c.name); // print Dave
+}
+```
+
+If you want to redefine a method in a sub class, you can use the `@override` annotation:
+
+```dart
+ class Pet {
+     String name;
+   
+     Pet(this.name);
+
+     String getName() {
+        return 'the pet name is: $name';
+     }
+ }
+
+ class Cat extends Pet {
+     Cat(String name) : super(name);
+
+     @override
+     String getName() {
+         return 'the cat name is: $name';
+     }
+ }
+
+void main() {
+  Cat c = Cat('Bob');
+  print(c.getName()); // print the cat name is: Bob
+}
+```
+
+### abstract class
+
+If the parent class is created with the `abstract` keyword then only a child class can 
+create an object instance as abstract class can't be instantiated.
+
+```dart
+abstract class Pet {
+    String name;
+}
+
+class Cat extends Pet {
+    Cat() {
+        name = 'Dave';
+    }
+}
+
+void main() {
+  Pet p = Pet(); // error, Pet is an abstract class
+  Cat c = Cat();
+  print(c.name); // print Dave
+}
+```
+
+When creating an instance of an inherited class, first the initialiazer list is run (if any) then
+the default constructor of the parent class and
+finally the default constructor of the class:
+
+```dart
+class Pet {
+    String name;
+
+    Pet() : name = 'Dave'{
+        print('Pet name: $name');
+    }
+}
+
+class Cat extends Pet {
+    Cat() {
+        print('Cat name: $name');
+    }
+}
+
+void main() {
+  Cat c = Cat();
+  // The name is set using the initializer list
+  // then the parent constructor is run
+  // then the cat constructor is run
+
+  // print Pet name: Dave
+  // then print Cat name: Dave
+}
+```
+
+### Class interface with `implements`
+
+Instead of using `extends` to inherite a behavior of a class,
+Dart provides the `implements` keyword which allows you to use classes as interfaces
+for another class. This class doesn't inherite any method logic but it will have to define
+the types and method of the referenced classes.
+
+```dart
+class PetA {
+    String name;
+}
+
+class PetB {
+    int age;
+}
+
+class Cat implements PetA, PetB {
+    @override
+    String name;
+    @override
+    int age;
+  
+    Cat(this.name, this.age);
+}
+void main() {
+    Cat c = Cat('Dave', 2);
+    print(c.name);
+    print(c.age);
+}
+```
 
 ## Effective Code in Flutter 
 
