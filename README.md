@@ -283,7 +283,6 @@ as it is in _inferred_ by the compiler.
 We checked: 
 https://stackoverflow.com/questions/62346301/does-dart-main-function
 
-
 > If see the `void` keyword and are curious about it, read: <br />
 > + https://en.wikipedia.org/wiki/Void_type
 > + https://medium.com/flutter-community/the-curious-case-of-void-in-dart-f0535705e529
@@ -297,15 +296,7 @@ The next thing you need to know in `Dart`
 is how to create variables (_or constants_)
 to store your data.
 
-<<<<<<< HEAD
-## Dart Syntax
-
-Syntax defines a set of rules for writing programs. Every language specification defines its own syntax.
-A Dart program is composed of −
-=======
-
 ### Using the `var` Keyword
->>>>>>> origin/add-examples-issue#15
 
 The most basic way of defining variables 
 is using the `var` keyword.
@@ -350,9 +341,6 @@ The inclusion of the `$` (dollar sign) in the `$name`
 is the way to include a variable inside the `String`.
 This is knonw as 
 [String interpolation](https://dart.dev/guides/language/language-tour#strings).
-
-
-
 
 
 ## `Dart` Syntax:
@@ -412,8 +400,6 @@ Error: Compilation failed.
 ```
 
 e.g: https://dartpad.dartlang.org/bea94fb6dec3a69799f1f040135489a0
-
-
 
 #### Types
 
@@ -668,7 +654,9 @@ Future<String> hello() { // The type parameter of Future is a String, represente
 
 ## Object-Oriented Programming in Dart
 
-`Dart` is an Object-Oriented language. Object Orientation is a software development paradigm that follows real-world modelling. Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
+`Dart` is an Object-Oriented language.#
+Object Orientation is a software development paradigm that follows real-world modelling.
+Object Orientation considers a program as a collection of objects that communicate with each other via mechanism called methods.
 
 - Object
 - State
@@ -836,6 +824,28 @@ void main() {
   print(c.name); // print Dave
 }
 ```
+
+Unlike "normal" class, an abstract class can contain methods without bodies.
+The idea is to let the sub class implement the logic of the method:
+
+```dart
+abstract class Pet {
+  void printMessage();
+}
+
+class Cat extends Pet {
+  @override
+  void printMessage() { // the printMessage implementation is required in subclass
+    print('cat class');
+  }
+}
+
+void main() {
+  Cat c = Cat();
+  c.printMessage(); // cat class
+}
+```
+
 
 When creating an instance of an inherited class, first the initialiazer list is run (if any) then
 the default constructor of the parent class and
