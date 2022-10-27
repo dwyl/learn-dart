@@ -115,7 +115,8 @@ this tutorial is the perfect place to start.
 It can be compiled to run as high performance JavaScript in web browsers,
 or as a native app on mobile (iOS + Android)
 and desktop.
-Is an object-oriented language with C-style syntax
+
+It's an object-oriented language with C-style syntax
 familiar to all developers who have used
 an Object Oriented Programming (OOP) 
 language (e.g. `JavaScript`, `Java`, `C++`, `C#`, `Go`, etc.).
@@ -225,6 +226,14 @@ Dart VM version: 2.8.4 (stable) (Wed Jun 3 12:26:04 2020 +0200) on "macos_x64"
 ```
 
 > You may have more _recent_ version of `Dart`; that's fine!
+
+
+> Since Dart is primarily used in building
+Flutter applications, it might make sense for you
+to follow the 
+[Flutter install guide](https://docs.flutter.dev/get-started/install),
+which will help you install Flutter which, in turn,
+have the Flutter SKD embedded.
 
 
 <br />
@@ -433,11 +442,22 @@ int a = 42;
 However `Dart` will produce an error if multiple assignements are done
 with different type of values:
 
-**error**
 ```dart
 int a;
 a = 42;
 a = 'hello'; //error as a is defined to only be assigned with a value of type int
+```
+
+Unless you explicitly tell Dart that 
+a variable can be `null`, every variable you 
+declare is considered **non-nullabe**. 
+_However_, even though null safety is used
+by default with Dart, you can indicate that a 
+variable might have the value `null`
+by adding `?` to its type declaration.
+
+```dart
+int? isNullableInt = null;
 ```
 
 #### The `final` keyword
@@ -507,7 +527,50 @@ dynamic int a; // https://repl.it/repls/GreenDeadMatch
 a = 42;
 ```
 
-### main() function
+#### The `late` keyword
+In Dart 2.12, the `late` keyword modifier was introduced.
+This keyword is meant to be used solely on two scenarios:
+
+##### Declaring a non-nullable variable that’s initialized after its declaration.
+
+Using `late` before variables makes sure that variable must be initialized later.
+Otherwise you can encounter a runtime error when the variable is used.
+```dart
+late String name;
+
+void getName(){
+    title = 'Ami';
+    print('Name is $title');
+}
+```
+
+##### Lazily initializing a variable.
+
+This is handy when a variable might not be needed and,
+initializing it is costly. 
+
+If we don't use `late`
+
+```dart
+String result = getExpensiveResult();
+```
+
+In the above code, 
+imagine the `result` variable is never used.
+The `getExpensiveResult()` function is still executed.
+
+If we do use `late`
+
+```dart
+late String result = getExpensiveResult(); // Lazily initialized.
+```
+
+In the above code, since `result` is never used,
+`getExpensiveResult()` is never executed.
+I
+
+
+### `main()` function
 
 The main function is a top-level function (a function created outside of a class) which is required in all Dart programs.
 It is the starting point of your program. It usually has the type void.
@@ -544,26 +607,35 @@ void main() {
 
 ### Named parameters
 
-Named parameters make it easier to understand which value is assigned to the argumment of a function.
-Positional parameters rely on the order of the parameters given to the function. Named parameter instead rely on the name given to the parameter,
-and discard the order.
-You define the parameters inside `{}` and when the function is called assign the values to the paremeters with ':':
+Named parameters make it easier to understand 
+which value is assigned to the argumment of a function.\
 
-'''dart
+**Positional parameters** rely
+on the order of the parameters given to the function. 
+
+**Named parameters** instead rely
+on the name given to the parameter,
+and discard the order.
+
+You define the parameters inside `{}` 
+and when the function is called assign the values
+to the paremeters with ':':
+
+```dart
 String hello({String firstName, String lastName}) {
   return '$firstName $lastName';
 }
 
 void main() {
     var myName = hello(firstName: 'bob', lastName: 'Smith');
-    var myNameAgain = hello(lastName: 'smith', firstName: 'bob'); // the order of the paramter doesn't matter
+    var myNameAgain = hello(lastName: 'smith', firstName: 'bob'); // the order of the parameter doesn't matter
     print(myName);
 }
-'''
+```
 
 By default named parameters are optional:
 
-'''dart
+```dart
 String hello({String firstName, String lastName}) {
   return '$firstName $lastName';
 }
@@ -572,7 +644,7 @@ void main() {
     var myName = hello(firstName: 'bob');
     print(myName); // print 'bob null'
 }
-'''
+```
 
 If you want a parameter to be mandatory you can anotate it with `@required`.
 You need first to import the 'meta' package which contains this anotation:
@@ -918,39 +990,51 @@ void main() {
 }
 ```
 
-## Effective Code in Flutter
-
-This section is a summary of the Effective `Dart` in Flutter article by Google Developer Expert Katarina Sheremet:
-https://medium.com/flutter-community/effective-code-in-your-flutter-app-from-the-beginning-e597444e1273
+## Useful tools to use with Flutter
 
 The `Dart` language is familiar to most developers used to object oriented programming.
-There are a few best practices worth learning to ensure success.</br>
-There are some tools that can make the process easier:
+There are a [few best practices](https://dart.dev/guides/language/effective-dart)
+worth learning to ensure success.
+
+There are some tools that can make the process of
+development much easier and intuitive:
 
 
 ## Dartanalyzer
 
-[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. It analyses your code for common mistakes and makes suggestions for how to simplify things. It corrects code before we run the application.</br>
+[`Dartanalyzer`](https://dart.dev/tools/dartanalyzer) is static analysis tool for `Dart`. 
+It analyses your code for common mistakes and makes suggestions for how to simplify things. 
+It corrects code before we run the application.</br>
 
 This is an example of performing static analysis
 over all the `Dart` files under the lib and test directories:
 `dartanalyzer lib test`
 
-## Pedantic Package
 
-The [pedantic](https://pub.dev/packages/pedantic) package shows how static analysis is used internally at Google.
-It contains pieces of `Dart` code that are used in best practices.</br>
+## Linting
 
-To use this package just add a dependency in our pubspec.yaml:
+Initially, developers used [pedantic](https://pub.dev/packages/pedantic),
+a package that showed how static analysis and analysis options
+matching those used internally at Google.
 
-```dart
-pedantic: ^1.4.0
-```
-Then to update the dependencies just use the command:
+However, having been discontinued, it's rather common 
+to use the [`Official Dart lint rules`](https://pub.dev/packages/lints) 
+(or [`flutter_lints`](https://pub.dev/packages/flutter_lints),
+which extends it to Flutter) for static code analysis.
 
+It contains linting of `Dart` code that are used in best practices.</br>
 
-```flutter packages get```
+For new apps created with `dart create`, the lints
+are enabled by default. In case you want to add these,
+simply run this at the root of your package:
 
+`dart pub add --dev lints`
+
+Create a new `analysis_options.yaml` file next to the `pubspec.yaml` file.
+
+`include: package:lints/recommended.yaml`
+
+And you should be done!
 
 
 ## `Dart` Testing
