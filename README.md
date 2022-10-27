@@ -25,41 +25,51 @@ that don't waste memory or drain the devices' battery,
 use `Dart` and `Flutter`.
 
 
-According to GitHub, the biggest developer community,
+According to GitHub in 2019, the biggest developer community,
 `Dart` is fastest growing programming language:
 https://octoverse.github.com/#top-languages
 
 ![github-top-programming-languages](https://user-images.githubusercontent.com/194400/84571947-b44b0c80-ad8e-11ea-8089-de0672e9e6d1.png)
 
-This is because `Flutter` is the second fastest growing project on GitHub:
+This is because, as of 2019, `Flutter` was the second fastest growing project on GitHub:
 https://octoverse.github.com/#top-and-trending-projects
 
 ![flutter-to-trending-project](https://user-images.githubusercontent.com/194400/84572723-e3b04800-ad93-11ea-85e2-19e9693e5a26.png)
 
-`Flutter` has recently overtaken React Native
-in Google search frequency:
+In 2019, `Flutter` has inclusively 
+overtaken React Native
+in Google search frequency and
+has maintained this trend ever since:
 [https://trends.google.com/trends/explore](https://trends.google.com/trends/explore?date=today%205-y&q=%2Fg%2F11f03_rzbg,react%20native)
 
-![google-trends-graph-flutter-v-react-native](https://user-images.githubusercontent.com/194400/84579369-24748500-adc5-11ea-8abd-fc99827d5b76.png)
+<img width="1373" alt="google-trends-graph-flutter-v-react-native" src="https://user-images.githubusercontent.com/17494745/198244948-29e5d3a5-1b2b-4d1f-a434-d4eee2a5799c.png">
+
 
 The Flutter GitHub repository: https://github.com/flutter/flutter has more Starts (_a good measure of popularity_):
-![flutter-stars-languages](https://user-images.githubusercontent.com/194400/84579828-2f311900-adc9-11ea-8ab3-1bb7404b5407.png)
+
+Flutter Stars           |  Flutter Languages
+:-------------------------:|:-------------------------:
+![flutter_stars](https://user-images.githubusercontent.com/17494745/198246297-2aafe6ea-0810-4c3a-b864-653ae3f72546.png)  |  ![flutter_languages](https://user-images.githubusercontent.com/17494745/198246641-792d7f4a-d025-4035-a204-3289962bade4.png)
+
 
 Additionally an important metric to consider 
-is the fact that **99.2%** of the code for `Flutter`
+is the fact that **99%** of the code for `Flutter`
 is written in `Dart` which means anyone who knows `Dart` 
 can read, understand and _contribute_ to it.
 
 By contrast React Native https://github.com/facebook/react-native 
 has fewer stars (_even though it's been available for longer_):
 
-![react-native-stars-languages](https://user-images.githubusercontent.com/194400/84579893-cf873d80-adc9-11ea-98d2-9268d036a0c1.png)
+React Native Stars           |  React Native Languages
+:-------------------------:|:-------------------------:
+![rn_stars](https://user-images.githubusercontent.com/17494745/198247220-6f9d44c0-bfbb-4850-a47a-6459798b3285.png)  |  ![rn_languages](https://user-images.githubusercontent.com/17494745/198247332-d986d36c-d354-4367-a7bf-7c7bb0a8856c.png)
+
 
 And RN is written in 5 programming languages! 
 So anyone wanting to contribute a truly cross-platform UI feature 
 needs to know at least `JavaScript`, `Java` and `Objective-C`.
 But since there are two _other_ flavours of `C` (namely `C++` and `Objective-C++`)
-used in RN, you will need to go digging for which 
+used in RN, you will need to go digging for whichm one. 
 If you need to _debug_ why a particular UI does not work _consistenly_
 across various Android versions or between iOS devices,
 you need to dig into the `Objective-C` to understand it.
@@ -93,7 +103,7 @@ You are here for the same reason as us,
 to learn `Dart` as fast as possible,
 so that you can build `Flutter` Apps.
 
-because you very few people are using `Dart` outside of `Flutter`;
+Because you very few people are using `Dart` outside of `Flutter`;
 anyone that needs _general purpose_ programming laguage uses `Python`.
 If you want to build `Flutter` Apps, learn `Dart`;
 this tutorial is the perfect place to start.
