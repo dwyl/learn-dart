@@ -1083,6 +1083,17 @@ It helps us to have a perception of how we have to put the code, it serves to te
 [Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit.
 
 
+There are a myriad of libraries 
+in the Dart ecosystem.
+If you are interested 
+in developing your own and share it with the world,
+you have to know how to *publish* it.
+Luckily for you, we got you covered!
+Check the [`publishing-packaged.md`](./publishing-packages.md)
+file for detailed instructions
+on how to get started! 🎉
+
+
 ## `Dart` VS Javascript:
 
 Dart:
