@@ -9,6 +9,50 @@ with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 <br />
 </div>
 
+- [What ?](#what-)
+- [Who?](#who)
+- [How?](#how)
+  - [Install `Dart`](#install-dart)
+    - [Mac](#mac)
+    - [Linux](#linux)
+    - [Windows?](#windows)
+  - [`Hello World!`](#hello-world)
+  - [Basic Variables](#basic-variables)
+    - [Using the `var` Keyword](#using-the-var-keyword)
+  - [`Dart` Syntax:](#dart-syntax)
+    - [Variables](#variables)
+      - [The keyword `var`](#the-keyword-var)
+      - [Types](#types)
+      - [The `final` keyword](#the-final-keyword)
+      - [The `const` keyword](#the-const-keyword)
+      - [The `dynamic` keyword](#the-dynamic-keyword)
+      - [The `late` keyword](#the-late-keyword)
+        - [Declaring a non-nullable variable that’s initialized after its declaration.](#declaring-a-non-nullable-variable-thats-initialized-after-its-declaration)
+        - [Lazily initializing a variable.](#lazily-initializing-a-variable)
+    - [`main()` function](#main-function)
+    - [Arrow functions](#arrow-functions)
+    - [Named parameters](#named-parameters)
+  - [Asynchronous events](#asynchronous-events)
+  - [Object-Oriented Programming in Dart](#object-oriented-programming-in-dart)
+    - [Constructor](#constructor)
+    - [Initializer list](#initializer-list)
+    - [inheritance](#inheritance)
+    - [abstract class](#abstract-class)
+    - [Class interface with `implements`](#class-interface-with-implements)
+  - [Useful tools to use with Flutter](#useful-tools-to-use-with-flutter)
+  - [Dartanalyzer](#dartanalyzer)
+  - [Linting](#linting)
+  - [`Dart` Testing](#dart-testing)
+  - [Types of Tests](#types-of-tests)
+    - [Unit Tests](#unit-tests)
+    - [Component Tests](#component-tests)
+    - [End-To-End Tests](#end-to-end-tests)
+  - [Useful libraries in Dart](#useful-libraries-in-dart)
+  - [Publishing Packages to `pub.dev`](#publishing-packages-to-pubdev)
+  - [`Dart` VS Javascript:](#dart-vs-javascript)
+
+
+
 ## Why?
 
 `Dart` is a general purpose programming language
@@ -111,7 +155,7 @@ If you want to build `Flutter` Apps, learn `Dart`;
 this tutorial is the perfect place to start.
 
 
-## What ?
+# What ?
 
 `Dart` is an open-source general-purpose programming language.
 It can be compiled to run as high performance JavaScript in web browsers,
@@ -145,7 +189,7 @@ https://dart.dev/guides
 https://en.wikipedia.org/wiki/Dart_(programming_language)
 
 
-## Who?
+# Who?
 
 This tutorial is for anyone who wants to learn `Dart` from scratch
 without any prior knowledge of other programming languages.
@@ -157,7 +201,7 @@ with `Flutter`.
 
 <br />
 
-## How?
+# How?
 
 We recommend that you `clone` this Git repository 
 so that you can follow along on your `localhost`
@@ -176,7 +220,7 @@ https://dartpad.dartlang.org
 
 <br />
 
-### Install `Dart`
+## Install `Dart`
 
 The official installation instructions are:
 https://dart.dev/get-dart
@@ -240,7 +284,7 @@ have the Flutter SKD embedded.
 
 <br />
 
-## Hello World!
+## `Hello World!`
 
 Once you have installed `Dart` on your `localhost` 
 (_or opened [Dart Pad](https://dartpad.dartlang.org) 
@@ -311,7 +355,7 @@ https://stackoverflow.com/questions/62346301/does-dart-main-function
 
 <br />
 
-## Variables
+## Basic Variables 
 
 The next thing you need to know in `Dart` 
 is how to create variables (_or constants_)
