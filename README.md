@@ -1085,7 +1085,7 @@ It helps us to have a perception of how we have to put the code, it serves to te
 
 There are many libraries 
 in the Dart ecosystem.
-If you are interested 
+If you want
 in developing your own and share it with the world,
 you have to know how to *publish* it.
 Luckily for you, we got you covered!
