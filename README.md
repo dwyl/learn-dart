@@ -12,7 +12,8 @@ with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 ## Why?
 
 `Dart` is a general purpose programming language
-that can be used for Servers, Client Apps, Native Mobile Apps
+that can be used for Servers, Client Apps, 
+**_Native_ Mobile Apps**
 and _everything_ in between!
 Google uses `Dart` for several of their high profile products/projects
 including Google Assistant (Client), Google Home Hub
@@ -25,7 +26,8 @@ that don't waste memory or drain the devices' battery,
 use `Dart` and `Flutter`.
 
 
-According to GitHub in 2019, the biggest developer community,
+According to GitHub in 2019, 
+the biggest developer community,
 `Dart` is fastest growing programming language:
 https://octoverse.github.com/#top-languages
 
@@ -1082,14 +1084,26 @@ It helps us to have a perception of how we have to put the code, it serves to te
 
 [Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit.
 
+## Publishing Packages to `pub.dev`
 
 There are many libraries 
-in the Dart ecosystem.
-If you want
-in developing your own and share it with the world,
+in the Dart ecosystem;
+see:
+[pub.dev/packages](https://pub.dev/packages)
+At the time of writing this doc,
+there are **`30643`** published packages:
+
+<img width="1350" alt="dart pub.dev packages" src="https://user-images.githubusercontent.com/194400/205872136-fbf87baf-e70b-47f2-bfc7-2e693a496dcb.png">
+
+This number grows daily 
+and by the time you read this it might be much higher!
+
+If you want to develop your own package
+and share it with the world,
 you have to know how to *publish* it.
 Luckily for you, we got you covered!
-Check the [`publishing-packaged.md`](./publishing-packages.md)
+Check the 
+[`publishing-packaged.md`](./publishing-packages.md)
 file for detailed instructions
 on how to get started! 🎉
 
