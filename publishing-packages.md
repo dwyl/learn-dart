@@ -1,21 +1,28 @@
-## Publishing packages with Dart
-The Dart ecosystem is made by packages 
-and libraries that you can import in your
+# Publishing Packages with `Dart`
+
+The `Dart` ecosystem
+is a collection of packages and libraries 
+that you can import in your
 Dart-lang based projects. 
-If you are creating a Flutter app,
-you will notice you'll have a `pubspec.yaml`
+If you are creating a `Flutter` app,
+you will have a 
+`pubspec.yaml`
 file with the dependencies needed
-to properly run it.
+to run it.
 
-Luckily, publishing a package 
+Publishing your own a package(s)
 is fairly simple. 
-All packages reside in https://pub.dev/
-and this is the place we use to publish them.
+All packages are published to:
+[pub.dev](https://pub.dev)
 
-## Before publishing
+
+## _Before_ Publishing
+
 There are some constraints that 
-ought to be met before publishing a package
-in Dart.
+need to be met before publishing a package
+in `Dart`:
+
+
 Firstly, the project should have a 
 `README.md`, a `CHANGELOG.md` and a
 `pubspec.yaml` file 
@@ -24,13 +31,13 @@ about the package - these can be found
 on the package's page, 
 like in the picture below).
 
-![package](https://user-images.githubusercontent.com/17494745/204871000-5e3f2b8b-9f43-4659-824d-3ce181a5d9f8.png)
+![dart-multihash-package](https://user-images.githubusercontent.com/17494745/204871000-5e3f2b8b-9f43-4659-824d-3ce181a5d9f8.png)
 
 
-Here's how the `pubspec.yaml` file
-looks like for the 
+The `pubspec.yaml` file
+for the
 [`dart_multihash`](https://github.com/dwyl/dart_multihash) 
-package.
+package is:
 
 ```yaml
 name: dart_multihash
@@ -60,7 +67,8 @@ amongst other properties effect the
 sidebar of the official page of the package
 after publishing.
 
-### Verified Publishers
+## _Verified_ Publishers
+
 If you have wondered about,
 you might have noticed that 
 lots of packages are published by
@@ -96,9 +104,10 @@ will be associated with.
 For the steps to get this done,
 do visit 
 https://dart.dev/tools/pub/publishing#create-verified-publisher
-.
 
-## Publishing your package
+
+## Publishing Your Package
+
 So let's imagine you've 
 completed your sweet Dart/Flutter
 package and you want to share it
@@ -200,7 +209,8 @@ This means your package has been published!
 :tada:
 Congrats!
 
-## Transfering to a verified publisher
+## Transferring to a Verified Publisher
+
 If you are part of an organization/verified publisher,
 you can transfer your uploaded package
 to it.
@@ -218,4 +228,4 @@ and click on `Transfer to Publisher`.
 organization/publisher to be able
 to transfer ownership**.
 
-And it's as simple as that! :smile:
+And it's as simple as that! 😊
