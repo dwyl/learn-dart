@@ -9,10 +9,55 @@ with [`Flutter`](https://github.com/dwyl/learn-flutter)!
 <br />
 </div>
 
+- [What ?](#what-)
+- [Who?](#who)
+- [How?](#how)
+  - [Install `Dart`](#install-dart)
+    - [Mac](#mac)
+    - [Linux](#linux)
+    - [Windows?](#windows)
+  - [`Hello World!`](#hello-world)
+  - [Basic Variables](#basic-variables)
+    - [Using the `var` Keyword](#using-the-var-keyword)
+  - [`Dart` Syntax:](#dart-syntax)
+    - [Variables](#variables)
+      - [The keyword `var`](#the-keyword-var)
+      - [Types](#types)
+      - [The `final` keyword](#the-final-keyword)
+      - [The `const` keyword](#the-const-keyword)
+      - [The `dynamic` keyword](#the-dynamic-keyword)
+      - [The `late` keyword](#the-late-keyword)
+        - [Declaring a non-nullable variable that’s initialized after its declaration.](#declaring-a-non-nullable-variable-thats-initialized-after-its-declaration)
+        - [Lazily initializing a variable.](#lazily-initializing-a-variable)
+    - [`main()` function](#main-function)
+    - [Arrow functions](#arrow-functions)
+    - [Named parameters](#named-parameters)
+  - [Asynchronous events](#asynchronous-events)
+  - [Object-Oriented Programming in Dart](#object-oriented-programming-in-dart)
+    - [Constructor](#constructor)
+    - [Initializer list](#initializer-list)
+    - [inheritance](#inheritance)
+    - [abstract class](#abstract-class)
+    - [Class interface with `implements`](#class-interface-with-implements)
+  - [Useful tools to use with Flutter](#useful-tools-to-use-with-flutter)
+  - [Dartanalyzer](#dartanalyzer)
+  - [Linting](#linting)
+  - [`Dart` Testing](#dart-testing)
+  - [Types of Tests](#types-of-tests)
+    - [Unit Tests](#unit-tests)
+    - [Component Tests](#component-tests)
+    - [End-To-End Tests](#end-to-end-tests)
+  - [Useful libraries in Dart](#useful-libraries-in-dart)
+  - [Publishing Packages to `pub.dev`](#publishing-packages-to-pubdev)
+  - [`Dart` VS Javascript:](#dart-vs-javascript)
+
+
+
 ## Why?
 
 `Dart` is a general purpose programming language
-that can be used for Servers, Client Apps, Native Mobile Apps
+that can be used for Servers, Client Apps, 
+**_Native_ Mobile Apps**
 and _everything_ in between!
 Google uses `Dart` for several of their high profile products/projects
 including Google Assistant (Client), Google Home Hub
@@ -25,7 +70,8 @@ that don't waste memory or drain the devices' battery,
 use `Dart` and `Flutter`.
 
 
-According to GitHub in 2019, the biggest developer community,
+According to GitHub in 2019, 
+the biggest developer community,
 `Dart` is fastest growing programming language:
 https://octoverse.github.com/#top-languages
 
@@ -109,7 +155,7 @@ If you want to build `Flutter` Apps, learn `Dart`;
 this tutorial is the perfect place to start.
 
 
-## What ?
+# What ?
 
 `Dart` is an open-source general-purpose programming language.
 It can be compiled to run as high performance JavaScript in web browsers,
@@ -143,7 +189,7 @@ https://dart.dev/guides
 https://en.wikipedia.org/wiki/Dart_(programming_language)
 
 
-## Who?
+# Who?
 
 This tutorial is for anyone who wants to learn `Dart` from scratch
 without any prior knowledge of other programming languages.
@@ -155,7 +201,7 @@ with `Flutter`.
 
 <br />
 
-## How?
+# How?
 
 We recommend that you `clone` this Git repository 
 so that you can follow along on your `localhost`
@@ -174,7 +220,7 @@ https://dartpad.dartlang.org
 
 <br />
 
-### Install `Dart`
+## Install `Dart`
 
 The official installation instructions are:
 https://dart.dev/get-dart
@@ -238,7 +284,7 @@ have the Flutter SKD embedded.
 
 <br />
 
-## Hello World!
+## `Hello World!`
 
 Once you have installed `Dart` on your `localhost` 
 (_or opened [Dart Pad](https://dartpad.dartlang.org) 
@@ -309,7 +355,7 @@ https://stackoverflow.com/questions/62346301/does-dart-main-function
 
 <br />
 
-## Variables
+## Basic Variables 
 
 The next thing you need to know in `Dart` 
 is how to create variables (_or constants_)
@@ -1081,6 +1127,29 @@ It helps us to have a perception of how we have to put the code, it serves to te
 ```package:mockito```
 
 [Mockito](https://pub.dev/packages/mockito) is a mocking library that helps us to mock functionality where we don't want to perform a specific action. We try to _avoid_ using mocks as much as possible because they can inadvertently make our tests more complex with limited benefit.
+
+## Publishing Packages to `pub.dev`
+
+There are many libraries 
+in the Dart ecosystem;
+see:
+[pub.dev/packages](https://pub.dev/packages)
+At the time of writing this doc,
+there are **`30643`** published packages:
+
+<img width="1350" alt="dart pub.dev packages" src="https://user-images.githubusercontent.com/194400/205872136-fbf87baf-e70b-47f2-bfc7-2e693a496dcb.png">
+
+This number grows daily 
+and by the time you read this it might be much higher!
+
+If you want to develop your own package
+and share it with the world,
+you have to know how to *publish* it.
+Luckily for you, we got you covered!
+Check the 
+[`publishing-packaged.md`](./publishing-packages.md)
+file for detailed instructions
+on how to get started! 🎉
 
 
 ## `Dart` VS Javascript:
